@@ -2,13 +2,11 @@
 using namespace std;
 
 int main(){
-
-
-    // MEDIA
     int nValores;
-    cout << "Insira a quantidade de valores que vc quer fazer a media: ";
+    cout << "Insira a quantidade de valores: ";
     cin >> nValores;
 
+    // MEDIA
     double valores[nValores], soma=0, media;
     cout << "Insira cada valor, separado por espaco: ";
     for (int i=0; i<nValores; i++){
@@ -16,5 +14,21 @@ int main(){
         soma = soma+valores[i];
     }
     media = soma/nValores;
-    cout << "A media eh: " << fixed << setprecision(3) << media << endl;
+    cout << "A media desse valores eh: " << fixed << setprecision(3) << media << endl;
+
+    // AMPLITUDE
+    double maior, menor;
+    maior = valores[0];
+    menor = valores[0];
+    for (int i=0; i<nValores; i++){
+        if (valores[i] > maior){
+            maior = valores[i];
+        }
+        if (valores[i] < menor){
+            menor = valores[i];
+        }
+    }
+    cout << "Maior valor = " << fixed << setprecision(3) << maior << endl;
+    cout << "Menor valor = " << fixed << setprecision(3) << menor << endl;
+    cout << "Amplitude = " << fixed << setprecision(3) << maior-menor << endl;
 }
