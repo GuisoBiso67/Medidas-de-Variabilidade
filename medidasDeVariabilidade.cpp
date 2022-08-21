@@ -33,8 +33,8 @@ int main(){
     cout << "Amplitude = " << fixed << setprecision(3) << maior-menor << endl;
 
     // DESVIOS
-    cout << "/ VALUE / -DIFERENCAS/DESVIOS- /" << endl;
+    cout << "/ VALUE / DIFERENCAS;DESVIOS /" << endl;
     for (int i=0; i<nValores; i++){
-        cout << "/ " << fixed << setprecision(3) << valores[i] << " / " << fixed << setprecision(3) << valores[i] << " - " << fixed << setprecision(3) << media << " = " << fixed << setprecision(3) << valores[i] - media << " / " << endl;
+        cout << "/ " << fixed << setprecision(2) << valores[i] << " / " << fixed << setprecision(2) << valores[i] << " - " << fixed << setprecision(2) << media << " = " << fixed << setprecision(2) << valores[i] - media << " / " << endl;
     }
 }
