@@ -34,7 +34,18 @@ int main(){
 
     // DESVIOS
     cout << "/ VALUE / DIFERENCAS;DESVIOS /" << endl;
+    double somaDesvios, mediaDesvios;
     for (int i=0; i<nValores; i++){
         cout << "/ " << fixed << setprecision(2) << valores[i] << " / " << fixed << setprecision(2) << valores[i] << " - " << fixed << setprecision(2) << media << " = " << fixed << setprecision(2) << valores[i] - media << " / " << endl;
+
+    // DESVIO MÉDIO
+        somaDesvios = somaDesvios + (valores[i]-media);
     }
+    mediaDesvios = somaDesvios/nValores;
+    cout << "Desvio Médio (DM) = " << fixed << setprecision(3) << mediaDesvios << endl;
+
+    // VARIÂNCIA
+
+    // DESVIO PADRÃO
+
 }
