@@ -5,7 +5,8 @@ int main(){
     int nValores;
     double maior, menor; // variaveis 'amplitude'
     double somaDesvios=0, mediaDesvios=0, temp=0; // variaveis 'desvios'
-    double quadradosDaDiferença=0, mediaQuadradosDaDiferença;
+    double quadradosDaDiferenca=0, mediaQuadradosDaDiferenca;
+    cout << endl;
     cout << "Insira a quantidade de valores: ";
     cin >> nValores;
 
@@ -40,25 +41,26 @@ int main(){
     for (int i=0; i<nValores; i++){
         cout << "/ " << fixed << setprecision(2) << valores[i] << " / " << fixed << setprecision(2) << valores[i] << " - " << fixed << setprecision(2) << media << " = " << fixed << setprecision(2) << valores[i] - media << " / " << endl;
 
-    // DESVIO MÉDIO & QUADRADOS DAS DIFERENÇAS
+    // DESVIO MÉDIO & QUADRADOS DAS DIFERENcAS
         temp = (valores[i] - media);
         if (temp < 0){
             somaDesvios += (temp*-1);
-            quadradosDaDiferença += (temp*-1)*(temp*-1);
+            quadradosDaDiferenca += (temp*-1)*(temp*-1);
         }else{
             somaDesvios += temp;
-            quadradosDaDiferença += (temp*temp);
+            quadradosDaDiferenca += (temp*temp);
        
         }
     }
     cout << endl;
     mediaDesvios = (somaDesvios/nValores);
-    mediaQuadradosDaDiferença = (quadradosDaDiferença/nValores);
+    mediaQuadradosDaDiferenca = (quadradosDaDiferenca/nValores);
     cout << "Desvio Medio (DM) = " << fixed << setprecision(3) << mediaDesvios << endl;
 
     // VARIÂNCIA
-    cout << "Variancia (Var) = " << fixed << setprecision(3) << mediaQuadradosDaDiferença << endl;
+    cout << "Variancia (Var) = " << fixed << setprecision(3) << mediaQuadradosDaDiferenca << endl;
 
     // DESVIO PADRÃO
-    cout << "Desvio Padrao (DP) = " << fixed << setprecision(3) << sqrt(mediaQuadradosDaDiferença) << endl;
+    cout << "Desvio Padrao (DP) = " << fixed << setprecision(3) << sqrt(mediaQuadradosDaDiferenca) << endl;
+    cout << endl;
 }
